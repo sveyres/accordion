@@ -66,6 +66,7 @@ main {
     margin: auto;
     vertical-align: top;
     text-align: center;
+    display:
 }
 
 main section {
@@ -88,13 +89,12 @@ h2 {
     line-height: 3rem;
 
     }
-section article {
-    display: inline-block;
-    width: 45%;
-    margin: 1em 1em;
-    width: inherit;
+section div {
 }
-
+section div article{
+    display: inline;
+    width: 40%;
+}
 p {
     margin-bottom: 1em;
 }
@@ -107,8 +107,11 @@ button {
     border: none;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 1em;
 }
-
-.cache {
+.cache{
     display: none;
+}
+.montre{
+    display: block;
 }
