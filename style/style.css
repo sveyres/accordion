@@ -48,10 +48,11 @@ aside i{
     width: 2em;
     height: 2em;
     text-align: center;
+    max-width: 2em;
 
 }
 
-ul li a:visited {
+ul li a {
     /*font-size: 4em;*/
 
     color: #ffffff;
@@ -74,12 +75,18 @@ main section {
 section i {
     margin: 0.8em;
     float: left;
+
 }
 h2 {
-    padding: 0.8em;
-    border-bottom: 1px solid lightgrey;
+    padding: 0 1rem;
+    border-bottom: 1px solid #ddd;
     font-weight: lighter;
     font-size: 1em;
+    display: block;
+    cursor: pointer;
+    min-height: 3rem;
+    line-height: 3rem;
+
     }
 section article {
     display: inline-block;
