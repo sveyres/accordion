@@ -16,7 +16,6 @@
     <aside class="">
         <ul>
             <li><a href="#"><i class="fa fa-film" aria-hidden="true"></i>
-
             <li><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-coffee" aria-hidden="true"></i></a></li>
@@ -25,10 +24,10 @@
     </aside>
     <main>
 
-        <section>
+        <section class="uncollapse">
             <i class="fa fa-film" aria-hidden="true" class="selected"></i>
             <h2 onClick="toggle(this)">Site Web et E-Commerce</h2>
-            <div id="demo" class="cache">
+            <div>
                 <article>
                     <h3>Site Web:</h3>
                     <p>Boostez votre visibilité sur le web !</p>
@@ -36,7 +35,7 @@
                     <button type="button" name="button">à partir de 650€ HT </button>
                 </article>
 
-                <article class="deux">
+                <article>
                     <h3>Site E-commerce:</h3>
                     <div>
                         <p>Boostez vos ventes grâce à nos solutions de commerce en ligne !</p>
@@ -47,37 +46,37 @@
             </div>
         </section>
 
-        <section onClick="afficher(this)">
+        <section class="collapse">
             <i class="fa fa-cogs" aria-hidden="true"></i>
-            <h2>Application sur mesure</h2>
-            <article class="cache">
+            <h2 onClick="toggle(this)">Application sur mesure</h2>
+            <article>
                 <p>Besoin de vous différencier, nous étudierons ensemble vos besoins afin de vous offrir une prestation personnalisée.</p>
                 <button type="button" name="button">uniquement sur devis</button>
             </article>
         </section>
 
-        <section onClick="afficher(this)">
+        <section class="collapse">
             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-            <h2>Formation</h2>
-            <article class="cache">
+            <h2 onClick="toggle(this)">Formation</h2>
+            <article>
                 <p>Nous proposons un éventail de formations autour du numérique, afin de faciliter votre quotidien.</p>
                 <button type="button" name="button">Uniquement Sur Devis</button>
             </article>
         </section>
 
-        <section onClick="afficher(this)">
+        <section class="collapse">
             <i class="fa fa-coffee" aria-hidden="true"></i>
-            <h2>Prototypage Rapide</h2>
-            <article class="cache">
+            <h2 onClick="toggle(this)">Prototypage Rapide</h2>
+            <article>
                 <p>Une idée de projet, nous travaillerons ensemble à l’élaboration d’un prototype</p>
                 <button type="button" name="button">Uniquement sur devis</button>
             </article>
         </section>
 
-        <section onClick="afficher(this)">
+        <section class="collapse">
             <i class="fa fa-wrench" aria-hidden="true"></i>
-            <h2  >Edition logicielle</h2>
-            <article class="cache">
+            <h2 onClick="toggle(this)">Edition logicielle</h2>
+            <article>
                 <p>Logiciel de vente aux enchères: En cours</p>
                 <p>Logiciel de gestion pour centres équestres: En cours</p>
                 <button type="button" name="button">Nous Contacter</button>
@@ -88,21 +87,13 @@
 </body>
 
 <script type="text/javascript">
-
-function afficher_cacher(id)
-{
-    if(document.getElementById(id).style.visibility=="hidden")
-    {
-        document.getElementById(id).style.visibility="visible";
-        document.getElementById('bouton_'+id).innerHTML='Cacher le texte';
+function toggle(element){
+    var sections = document.getElementsByClassName("uncollapse");
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].className ="collapse";
     }
-    else
-    {
-        document.getElementById(id).style.visibility="hidden";
-        document.getElementById('bouton_'+id).innerHTML='Afficher le texte';
-    }
-    return true;
-    }
+    element.parentElement.className="uncollapse";
+}
 </script>
 
 </html>

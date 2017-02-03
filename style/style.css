@@ -109,9 +109,9 @@ button {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
-.cache{
+.collapse div, .collapse article{
     display: none;
 }
-.montre{
+.uncollapse div, .uncollapse article{
     display: block;
 }
